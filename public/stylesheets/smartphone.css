@@ -5,3 +5,6 @@ body { background: #333; }
 h2 span, section h3 { display: none; }
 body                { font-size: xx-large; }
 footer, input       { font-size: large; }
+
+h3.credits          { display: block; font-size: medium; }
+img.credits      { margin-top: 10px; }
