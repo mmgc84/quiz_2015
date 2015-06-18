@@ -1,5 +1,18 @@
+<form method="get" action="/quizes">
+  <p>Pregunta a buscar:</p>
+  <input type="text" name="search" placeholder="Patron a buscar en preguntas"/>
+  <input type="submit" value="Enviar">
+</form>
+
+<% if(busqueda !== '') { %>
+  <p>El patron de su busqueda fue: "<%= busqueda %>"</p>
+  <p>Los resultados de su busqueda son:</p>
+<% } %>
+
 <table>
 <% var i; for (i=0; i < quizes.length; i++) { %>
-    <tr><td><a href="quizes/<%= quizes[i].id %>"><%= quizes[i].pregunta %></a></td></tr>
+  <tr><td><a href="quizes/<%= quizes[i].id %>"><%= quizes[i].pregunta %></a></td></tr>
 <% } %>
 </table>
+
+<a href="/quizes">Volver a Preguntas</a>
