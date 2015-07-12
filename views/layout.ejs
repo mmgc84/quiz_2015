@@ -21,8 +21,9 @@
         <%} else {%>
           <span class="rigth">
             <form method="post" action="/logout?_method=delete">
+              <span><%= session.user.username %></span>
               <button type="submit" onClick="return confirm('Cerrar Sesión');">
-                <%= session.user.username %> Logout
+                Logout
               </button>
             </form>
           </span>

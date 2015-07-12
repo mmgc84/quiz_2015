@@ -85,9 +85,7 @@ exports.update = function(req, res) {
   req.quiz.respuesta = req.body.quiz.respuesta;
   req.quiz.indice = req.body.quiz.indice;
 
-  req.quiz
-  .validate()
-  .then(
+  req.quiz.validate().then(
     function (err){
       if (err) {
         res.render('quizes/edit', {quiz: req.quiz, errors: err.errors});
