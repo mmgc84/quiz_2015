@@ -15,3 +15,5 @@ exports.check = function (req, res, next) {
     next();
   }
 };
+
+//>>> Todo en una sola funcion <<<

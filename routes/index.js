@@ -5,6 +5,7 @@ var quizController = require('../controllers/quiz_controller');
 var commentController = require('../controllers/comment_controller');
 var sessionController = require('../controllers/session_controller');
 var autologoutController = require('../controllers/autologout_controller');
+var estadisticasController = require('../controllers/estadisticas_controller');
 
 // Pagina de entrada (home page)
 router.get('/', function(req, res) {
@@ -42,7 +43,11 @@ router.put('/quizes/:quizId(\\d+)/comments/:commentId(\\d+)/publish',
 autologoutController.check, sessionController.loginRequired,
 commentController.publish);
 
+// Definicion de rutas de estadisticas
+router.get('/estadisticas',                       estadisticasController.show);
+
 // Definicion de rutas de creditos
 router.get('/author',                       quizController.author);
+
 
 module.exports = router;

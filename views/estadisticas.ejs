@@ -1,0 +1,22 @@
+<h3 class="estadisticas">Estadisticas</h3>
+
+<p>Total de Preguntas: <%= quizes.length %></p>
+
+<p>Total de Comentarios: <%= comments.length %></p>
+
+<p>Número medio de comentarios por pregunta: <%= media %></p>
+
+<p>Número de preguntas sin comentarios: <%= sinComentarios %></p>
+
+<p>Número de preguntas con comentarios: <%= conComentarios %></p>
+
+<!--
+<% for(quiz in quizes) { %>
+  <span>- <%= quizes[quiz].pregunta %><br /></span>
+  <% for(comment in comments) { %>
+    <% if(comments[comment].QuizId == quizes[quiz].id) { %>
+      <span>- <%= comments[comment].texto %><br /></span>
+    <% } %>
+  <% } %>
+<% } %>
+-->
